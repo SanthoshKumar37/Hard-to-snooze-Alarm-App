@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.258" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_alarm_add.xml" value="0.309" />
+        <entry key="app/src/main/res/drawable/ic_simple_alarm.xml" value="0.309" />
+        <entry key="app/src/main/res/layout/activity_alarm.xml" value="0.2899122807017544" />
+        <entry key="app/src/main/res/layout/activity_fullscreen.xml" value="0.2736842105263158" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/alarm_list_item.xml" value="0.2899122807017544" />
+        <entry key="app/src/main/res/layout/fragment_alarm.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.29035087719298247" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.2736842105263158" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.29035087719298247" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

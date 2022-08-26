@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/parent"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 : 10 AM"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:id="@+id/listAlarmTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm Name"
+            android:textSize="20sp"
+            android:layout_below="@+id/listAlarmTime"
+            android:id="@+id/listAlarmName"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm Type"
+            android:textSize="20sp"
+            android:layout_below="@+id/listAlarmTime"
+            android:layout_toEndOf="@+id/listAlarmName"
+            android:id="@+id/listAlarmType"
+            />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:checked="true"
+            android:id="@+id/cancelButton"
+            tools:ignore="RelativeOverlap" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/listAlarmTime"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_delete"
+            android:background="#FFFFFF"
+            android:id="@+id/deleteButton"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

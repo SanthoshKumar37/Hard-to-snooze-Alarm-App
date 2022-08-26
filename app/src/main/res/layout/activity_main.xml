@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Choose Time"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:id="@+id/alarmTime"/>-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wrapperLayout"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Alarm"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/projectHeading"
+                />
+
+            <RelativeLayout
+                android:id="@+id/alarmTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_below="@+id/projectHeading">
+
+                <TextView
+                    android:id="@+id/alarmTimeHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Choose Time"
+                    android:textColor="@color/black"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/alarmTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="10 : 10 AM"
+                    android:clickable="true"
+                    android:textSize="23sp"
+                    android:focusable="true" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alarmTimeLayout"
+                android:hint="Title"
+                android:textSize="23sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/black"
+                android:id="@+id/alarmTitle"/>
+
+
+            <RelativeLayout
+                android:id="@+id/vibrateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alarmTitle"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/vibrateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:text="Vibrate"
+                    android:textSize="23sp" />
+
+                <ToggleButton
+                    android:id="@+id/vibrateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vibrateLayout"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:id="@+id/snoozeLayout">
+
+                <TextView
+                    android:id="@+id/snoozeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:text="Snooze"
+                    android:textSize="23sp" />
+
+                <ToggleButton
+                    android:id="@+id/snoozeToggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true" />
+
+                <EditText
+                    android:id="@+id/minuteValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/snoozeText"
+                    android:textSize="21sp"
+                    android:layout_marginStart="30dp"
+                    android:hint="min"
+                    android:visibility="visible"
+                    android:inputType="number"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/repeatLayout"
+                android:layout_below="@+id/snoozeLayout"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Repeat"
+                    android:textSize="23sp"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"/>
+
+                <Spinner
+                    android:id="@+id/repeatOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="30dp"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customLayout"
+                android:layout_below="@+id/repeatLayout"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:paddingBottom="20dp"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cboxMon"
+                    android:layout_marginEnd="20dp"
+                    android:text="MON"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cboxTue"
+                    android:layout_toEndOf="@+id/cboxMon"
+                    android:layout_marginEnd="20dp"
+                    android:text="TUE"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cboxWed"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/cboxTue"
+                    android:text="WED"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/cboxThu"
+                    android:layout_toEndOf="@+id/cboxWed"
+                    android:text="THU"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cboxMon"
+                    android:layout_marginEnd="30dp"
+                    android:id="@+id/cboxFri"
+                    android:text="FRI"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cboxFri"
+                    android:layout_below="@+id/cboxTue"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/cboxSat"
+                    android:text="SAT"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cboxSat"
+                    android:layout_marginEnd="20dp"
+                    android:layout_below="@+id/cboxWed"
+                    android:id="@+id/cboxSun"
+                    android:text="SAT"/>
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customLayout"
+                android:layout_centerInParent="true"
+                android:id="@+id/addAlarmButton"
+                android:text="add"
+                android:onClick="addAlarmClicked"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/addAlarmButton"-->
+<!--                android:id="@+id/listAlarmTitle"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="30sp"-->
+<!--                android:text="Alarm List"-->
+<!--                android:visibility="invisible"/>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingBottom="20dp"-->
+<!--                android:layout_below="@+id/listAlarmTitle"-->
+<!--                android:id="@+id/listLayout"/>-->
+
+
+        </RelativeLayout>
+</RelativeLayout>
